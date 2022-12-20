@@ -1,0 +1,18 @@
+<h4>Internal Server Error - refershing the page will make the error disapper</h4>
+<ng-container *ngIf="error">
+  <h5 class="text-danger">
+    Error:{{error.message}}
+  </h5>
+  <p class="font-weight-bold">Note: if you are sesing this then angular is probably not to blame</p>
+  <p>what to do next</p>
+  <ol>
+    <li>Open the chrome dev tools! Then check the failing requets in the Network Tab</li>
+    <li>Examine teh request URl -What API endpoint you are requesting</li>
+    <li>Reproduce the problem in the postman</li>
+  </ol>
+  <p style="font-weight: bold ;background-color: whitesmoke;">
+  <code class="mt-5">
+       {{error.details}}
+  </code>
+</p>
+</ng-container>
