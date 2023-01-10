@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
  using API.Extentions;
 using API.Middleware;
+using Microsoft.EntityFrameworkCore.Update.Internal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,4 +52,25 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+
+
+//making a middleware service to apply the seed data through migration
+using var scope= app.Services.CreateScope();
+var services = scope.ServiceProvider;
+try
+{
+	var context = services.GetRequiredService<DataContext>();	
+	await context.Database.MigrateAsync();
+
+	await Seed.SeedUsers(context);
+
+}
+catch (Exception ex)
+{
+
+	var logger = services.GetService<Logger<Program>>();
+	logger.LogError(ex, "An Error Occured while migartion");
+}
+
+//
 app.Run();
