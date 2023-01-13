@@ -22,6 +22,8 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { MembersCardComponent } from './members/members-card/members-card.component';
 import { JwtInterceptor } from './_interceptor/jwt.interceptor';
 import { MembersEditComponent } from './members/members-edit/members-edit.component';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { TestInputsComponent } from './_froms/test-inputs/test-inputs.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { MembersEditComponent } from './members/members-edit/members-edit.compon
     NotFoundComponent,
     ServerErrorComponent,
     MembersCardComponent,
-    MembersEditComponent
+    MembersEditComponent,
+    PhotoEditorComponent,
+    TestInputsComponent
   ],
   imports: [
     BrowserModule,
