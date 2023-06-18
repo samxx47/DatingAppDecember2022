@@ -24,6 +24,7 @@ import { JwtInterceptor } from './_interceptor/jwt.interceptor';
 import { MembersEditComponent } from './members/members-edit/members-edit.component';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TestInputsComponent } from './_froms/test-inputs/test-inputs.component';
+import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { TestInputsComponent } from './_froms/test-inputs/test-inputs.component'
     MembersCardComponent,
     MembersEditComponent,
     PhotoEditorComponent,
-    TestInputsComponent
+    TestInputsComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,

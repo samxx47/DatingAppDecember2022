@@ -13,6 +13,7 @@ namespace API.Helpers
                 .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.DateOfBirth.CalculateAge()));  // so we are mapping the photourl with  the url present in the other entity i,e photos.
             CreateMap<Photos, PhotosDto>();
             CreateMap<MemberUpdateDto, AppUser>();
+            CreateMap<RegisterDto, AppUser>();
         }
     }
 }

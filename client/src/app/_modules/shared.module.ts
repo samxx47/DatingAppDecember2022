@@ -7,6 +7,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs'
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
       //   type:'line-scale-party'
       // })
       FileUploadModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      BsDatepickerModule.forRoot(),
   ],
   exports:[
     BsDropdownModule,
@@ -37,7 +39,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgxGalleryModule,
     NgxGalleryModule,
     FileUploadModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDatepickerModule
 
   ]
 })
