@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using API.Extentions;
 using SQLitePCL;
 using System.Runtime.CompilerServices;
+using API.Helpers;
 
 namespace API.Controllers;
 
@@ -38,10 +39,22 @@ public class UsersController : BaseApi
 	[HttpGet]
 
 
-	public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
+	public async Task<ActionResult<PageList<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
 	{
-		var users =await _userRepository.GetMembersAsync();
+		var currentUser = await _userRepository.GetUserByNameAsync(User.GetUsername());
+		userParams.CurrentUsername = currentUser.UserName;
+
+		if (string.IsNullOrEmpty(userParams.Gender))
+		{
+			userParams.Gender = currentUser.Gender== "male" ? "female": "male";
+		}
+
+
+
+        var users =await _userRepository.GetMembersAsync(userParams);
 		//var usersToReturn = _mapper.Map<IEnumerable<MemberDto>>(users);
+
+		Response.AddPaginationHeader(new PaginationHeader(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages));
 		return Ok(users);
 	}
 

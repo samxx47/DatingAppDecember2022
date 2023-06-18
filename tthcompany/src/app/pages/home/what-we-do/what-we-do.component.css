@@ -1,0 +1,11 @@
+
+.card-body{
+  color: azure;
+}
+.wrap-contaner{
+ height:30rem;
+  background-image: linear-gradient(to right, rgba(36, 105, 174, 0), rgb(55, 54, 92)),
+  url("https://www.completeonline.co.uk/wp-content/uploads/2022/08/Emerging-web-design-trends-for-2021.jpeg") ;
+  background-blend-mode: lighten;
+
+}

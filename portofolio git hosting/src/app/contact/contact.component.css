@@ -1,0 +1,82 @@
+.header-content .header-subtitle {
+  font-weight: 200;
+  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+ .header-content {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+  margin-top: -8rem;
+}
+
+ .header-content .header-subtitle {
+  font-weight: 200;
+  color: #fff;
+  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+ .header-content .header-title {
+  font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bold;
+  line-height: .7;
+  margin-bottom: 25px;
+  color: inherit;
+
+}
+
+ .header-content .header-mono {
+  letter-spacing: 5px;
+  font-weight: 500;
+  font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300)));
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+
+.fa {
+  padding: 6px;
+  font-size: 38px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  /* background: #3B5998; */
+  color: white;
+}
+
+.fa-twitter {
+  /* background: #55ACEE; */
+  color: white;
+}
+
+.fa-google {
+  /* background: #dd4b39; */
+  color: white;
+}
+
+.fa-linkedin {
+  /* background: #007bb5; */
+  color: white;
+}
+
+.fa-instagram {
+  /* background: #125688; */
+  color: white;
+}
+
+.social-app {
+  display: grid;
+  /* flex-direction: row; */
+}

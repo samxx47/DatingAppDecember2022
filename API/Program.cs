@@ -52,7 +52,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-
+//app.UseRouting();
 
 //making a middleware service to apply the seed data through migration
 using var scope= app.Services.CreateScope();

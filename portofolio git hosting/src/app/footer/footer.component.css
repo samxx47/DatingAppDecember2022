@@ -1,0 +1,16 @@
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+.py-3 {
+  padding-bottom: 1rem !important;
+}
+.py-3 {
+  padding-top: 1rem !important;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+ .footer{
+ margin-top: 34rem;
+ }
+}

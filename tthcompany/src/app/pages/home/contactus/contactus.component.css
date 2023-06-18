@@ -1,0 +1,5 @@
+#grad1 {
+
+  background-color: transparent; /* For browsers that do not support gradients */
+  background-image: linear-gradient(0deg, rgb(152, 145, 243), white);
+}

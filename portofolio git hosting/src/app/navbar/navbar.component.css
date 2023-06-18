@@ -1,0 +1,11 @@
+.rounded-circle {
+  border-radius: 50% !important;
+  margin-top: -5rem;
+  margin-left: 2rem;
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    justify-content: center;
+}
+}
